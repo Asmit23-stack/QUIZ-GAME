@@ -1,0 +1,132 @@
+* ,*::before, *::after{
+    box-sizing: border-box;
+    /* margin: 0px; */
+    /* padding:0px; */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+:root{
+    --hue-neutron:200;
+    --hue-electron:0;
+    --hue-proton:145;
+}
+
+body{
+    --hue:var(--hue-neutron);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color:hsl(var(--hue),100% ,20%);
+    
+}
+
+body.correct{
+    --hue:var(--hue-proton);
+}
+body.wrong{
+    --hue:var(--hue-electron);
+}
+/* body.correct{
+    --hue:var(--hue-proton);
+} */
+
+#container{
+width:800px;
+position: absolute;
+min-width: 80%;
+/* background-color:blueviolet; */
+border-radius: 5px;
+padding:5px;
+z-index: 11;
+}
+
+
+.btn-grid{
+   display: grid;
+  grid-template-columns: 30vw 30vw;
+  gap: 15px;
+  margin: 12px;
+  justify-content: center;
+}
+
+.btn{
+    --hue:var(--hue-neutron);
+    border:1px solid hsl(var(--hue),100%,30%);
+    background-color: hsl(var(--hue),100%,50%);
+    border-radius: 5px;
+    padding:15px 10px;
+    color:white;
+    outline:none;
+}  
+
+.btn:hover{
+    border: rgb(206, 23, 23);
+}
+.btn.wrong{
+--hue:var(--hue-electron);
+    
+}
+.btn.correct{
+--hue:var(--hue-proton);
+}
+
+.start-btn-btn , .next-btn-btn, .btnH{
+    font-size: 2rem;
+    font-weight: bolder;
+    padding: 0px 20px;
+    background: none;
+    border: none;
+    border-radius: 8px;
+    /* border: 2px solid #d15151; */
+    color: #3dffddd9;
+    font-family: "Poppins","sans-serif";
+    box-shadow: inset -3px -4px 7px cyan, 1px -1px 4px 2px #32a5a5;
+}
+.btnNew:hover{
+    cursor:pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(8, 112 ,240 ,0.6);
+}
+.controls{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:10vw;
+}
+
+.hide{
+     display: none;     
+}
+.question{
+    color: white;
+  text-align: center;
+  border-bottom: 2px double cyan;
+  font-size: 18px;
+  /* text-shadow: 3px 2px #840303; */
+  width: 60vw;
+  margin: auto;
+}
+
+
+.question::before{
+    content: "Q.";
+    
+}
+
+
+.A::before{
+    content: "A.";
+}
+.B::before{
+    content: "B.";
+}
+.C::before{
+    content: "C.";
+}
+.D::before{
+    content: "D.";
+}

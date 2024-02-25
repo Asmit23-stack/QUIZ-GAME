@@ -1,0 +1,109 @@
+*{
+    box-sizing:border-box;
+    padding: 0;
+    margin: 0;
+}
+.clock{
+    background-color:cyan;
+    border-radius:9999px;
+    border:2px solid plum;
+    width:6%;
+    /* height: 15%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.timer{
+    z-index:10;
+    position: absolute ;
+    font-size:2rem;
+    padding:20px;
+}
+.clock {
+    position: relative;
+    width: 15vw;
+    height:5vh;
+    background: repeating-conic-gradient(from var(--a), #ff2770 0%, #ff2770 5%, transparent 5%, transparent 40%, #ff2770 50%);
+    animation: animate 4s linear infinite;
+    border-radius: 20px;
+}
+
+@property --a {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+/* @-moz-property --a {
+        syntax: '<angle>';
+        inherits: false;
+        initial-value: 0deg;
+    } */
+@keyframes animate {
+    0% {
+        --a: 0deg;
+    }
+
+    100% {
+        --a: 360deg;
+    }
+}
+
+.clock::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: repeating-conic-gradient(from var(--a), #02f0e4 0%, #02f0e4 5%, transparent 5%, transparent 40%, #02f0e4 50%);
+    animation: animate 4s linear infinite;
+    animation-delay: -1s;
+    border-radius: 20px;
+
+}
+
+.clock::after {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    background: #2d2d39;
+    border-radius: 15px;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.clock {
+    background-color: cyan;
+    border-radius: 9999px;
+    border: 2px solid plum;
+    width: 6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 15vw;
+    height: 5vh;
+    animation: rotate 4s linear infinite;
+    border-radius: 20px;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.timer {
+    z-index: 10;
+    position: absolute;
+    font-size: 2rem;
+    padding: 20px;
+}
+
+/* ... rest of your CSS ... */

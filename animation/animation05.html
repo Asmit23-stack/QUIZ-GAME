@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+      background-color: #282c34; /* Background color similar to Replit's dark theme */
+      color: #61dafb; /* Text color similar to Replit's blue */
+      font-family: 'Arial', sans-serif;
+    }
+
+    .content {
+      z-index: 1;
+    }
+
+    .border-animation::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      border: 10px solid transparent;
+      boder-image: repeating-conic-gradient(red, red 45deg, cyan 45deg, cyan 90deg);
+      /* You can adjust the angles and colors based on your preferences */
+      border-image-slice: 1;
+      animation: rotateGradient 5s linear infinite;
+      box-sizing: border-box;
+      pointer-events: none; /* Make sure the border doesn't interfere with content interaction */
+      z-index: 0;
+    }
+
+    h1 {
+      color: white;
+      font-family: 'Arial', sans-serif;
+      position: relative;
+      z-index: 1;
+    }
+
+    @keyframes rotateGradient {
+      0% {
+        transform: translateX(0) translateY(0) rotate(0deg);
+      }
+      25% {
+        transform: translateX(100%) translateY(0) rotate(90deg);
+      }
+      50% {
+        transform: translateX(100%) translateY(100%) rotate(180deg);
+      }
+      75% {
+        transform: translateX(0) translateY(100%) rotate(270deg);
+      }
+      100% {
+        transform: translateX(0) translateY(0) rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="border-animation"></div>
+  <div class="content">
+    <h1>Your Content Goes Here</h1>
+  </div>
+</body>
+</html>

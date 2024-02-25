@@ -1,0 +1,194 @@
+.containerAni {
+    position: absolute;
+    z-index: 11;
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+}
+
+.bubbles {
+    display: flex;
+    position: relative;
+}
+
+.bubbles span {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background: cyan;
+    margin: 0 4px;
+    border-radius: 9999px;
+    box-shadow: 0 0 0 10px #4fc3dc44,
+        0 0 50px #4fc3dc,
+        0 0 100px #4fc3dc,
+        0 0 100px #4fc3dc;
+    animation: asmit 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+
+.bubbles span:nth-child(even) {
+    background: rgb(224, 25, 42);
+    box-shadow: 0 0 0 10px #ff2d7544,
+        0 0 50px rgb(224, 25, 42),
+        0 0 100px rgb(224, 25, 42);
+}
+
+@keyframes asmit {
+    0% {
+        transform: translateY(90vh) scale(0);
+    }
+
+    100% {
+        transform: translateY(10vh) scale(1);
+    }
+}
+
+.box {
+    position: relative;
+    width: 100vw;
+    height: 90vh;
+    background: repeating-conic-gradient(from var(--a), #ff2770 0%, #ff2770 5%, transparent 5%, transparent 40%, #ff2770 50%);
+    animation: animate 4s linear infinite;
+    border-radius: 20px;
+}
+
+@property --a {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+/* @-moz-property --a {
+        syntax: '<angle>';
+        inherits: false;
+        initial-value: 0deg;
+    } */
+@keyframes animate {
+    0% {
+        --a: 0deg;
+    }
+
+    100% {
+        --a: 360deg;
+    }
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: repeating-conic-gradient(from var(--a), #02f0e4 0%, #02f0e4 5%, transparent 5%, transparent 40%, #02f0e4 50%);
+    animation: animate 4s linear infinite;
+    animation-delay: -1s;
+    border-radius: 20px;
+
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    background: #2d2d39;
+    border-radius: 15px;
+}
+
+.clock{
+    /* z-index: 11;
+    position: absolute;
+    background-color:cyan;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15vw;
+    height:10vh;
+    background: repeating-conic-gradient(from var(--a), #ff2770 0%, #ff2770 5%, transparent 5%, transparent 40%, #ff2770 50%);
+    animation: animate 4s linear infinite; */
+    z-index: 11;
+    position: absolute ;
+    width: 80vw;
+    min-height: 60vh;
+}
+.timer {
+    position: absolute;
+    font-size: 2rem;
+    padding: 10px 50px;
+    background-color: #282828;
+    color: #3dffd3;
+    top: 2vh;
+    border-radius: 15px;
+    border: 2px solid cyan;
+    border-radius: 14px;
+    box-shadow: 3px 1px 20px 2px #00e7ff, -2px -3px 12px 0px red;
+}
+.countScore{
+    position: absolute;    
+    z-index: 9;
+    top: 10vh;
+        right: 10vw;
+        font-size:20px;
+        color: #3dffdd;
+        padding: 0px 12px;
+        margin: 12px 0px;
+        background-color: #2d2d39;
+        border-radius: 8px;
+        box-shadow: 3px 1px 7px 2px #00e7ff, -2px -3px 9px 0px red;
+    }
+ 
+
+.countPoint {
+    position: absolute;
+    z-index: 9;
+    top: 10vh;
+    font-size: 20px;
+    left: 10vw;
+    color: #3dffdd;
+    padding: 0px 12px;
+    margin: 12px 0px;
+    background-color: #2d2d39;
+    border-radius: 8px;
+    box-shadow: 3px 1px 7px 2px #00e7ff, -2px -3px 9px 0px red;
+}
+.clock::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: repeating-conic-gradient(from var(--a), #02f0e4 0%, #02f0e4 5%, transparent 5%, transparent 40%, #02f0e4 50%);
+    animation: animate 4s linear infinite;
+    animation-delay: -1s;
+    border-radius: 20px;
+
+}
+
+.clock::after {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    background: #2d2d39;
+    border-radius: 15px;
+}
+
+@media screen and(min-height:600px){
+.bubbles span {
+    position: relative;
+    width: 25px;
+    height: 15px;
+    background: cyan;
+    margin: 0 4px;
+    border-radius: 9999px;
+    box-shadow: 0 0 0 5px #4fc3dc44,
+        0 0 10px #4fc3dc,
+        0 0 20px #4fc3dc,
+        0 0 20px #4fc3dc;
+    animation: asmit 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+    .bubbles span:nth-child(even) {
+    background: rgb(224, 25, 42);
+    box-shadow: 0 0 0 10px #ff2d7544,
+        0 0 20px rgb(224, 25, 42),
+        0 0 20px rgb(224, 25, 42);
+}
+}

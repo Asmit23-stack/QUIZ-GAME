@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="animation.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500&family=Poppins:ital,wght@0,200;1,200&display=swap"
+        rel="stylesheet">
+    <title>Quiz game</title>
+</head>
+
+<body>
+    <div class="containerAni">
+        <div class="bubbles">
+            <span style="--i:4"></span>
+            <span style="--i:20"></span>
+            <span style="--i:17"></span>
+            <span style="--i:5"></span>
+            <span style="--i:16"></span>
+            <span style="--i:4"></span>
+            <span style="--i:20"></span>
+            <span style="--i:17"></span>
+            <span style="--i:19"></span>
+            <span style="--i:15"></span>
+            <span style="--i:13"></span>
+            <span style="--i:8"></span>
+            <span style="--i:12"></span>
+            <span style="--i:3"></span>
+            <span style="--i:1"></span>
+            <span style="--i:14"></span>
+            <span style="--i:2"></span>
+            <span style="--i:18"></span>
+            <span style="--i:4"></span>
+            <span style="--i:20"></span>
+            <span style="--i:17"></span>
+            <span style="--i:19"></span>
+            <span style="--i:15"></span>
+            <span style="--i:7"></span>
+            <span style="--i:5"></span>
+            <span style="--i:16"></span>
+            <span style="--i:6"></span>
+            <span style="--i:1"></span>
+            <span style="--i:6"></span>
+            <span style="--i:11"></span>
+            <span style="--i:10"></span>
+            <span style="--i:13"></span>
+            <span style="--i:8"></span>
+            <span style="--i:12"></span>
+            <span style="--i:7"></span>
+            <span style="--i:5"></span>
+            <span style="--i:16"></span>
+            <span style="--i:6"></span>
+            <span style="--i:1"></span>
+            <span style="--i:6"></span>
+            <span style="--i:11"></span>
+            <span style="--i:10"></span>
+            <span style="--i:13"></span>
+            <span style="--i:8"></span>
+            <span style="--i:12"></span>
+            <span style="--i:3"></span>
+            <span style="--i:1"></span>
+            <span style="--i:14"></span>
+            <span style="--i:2"></span>
+            <span style="--i:18"></span>
+
+        </div>
+    </div>
+    <div class="box">
+
+    </div>
+    
+    <div class="timer hide">
+
+    </div >
+
+        
+        <div class="clock hide"></div> 
+        <p id="question-count" class="countPoint"></p>
+        <p id="score" class="countScore"></p> <!-- Add this line for score display -->
+        
+
+
+  
+        <div id="container">
+            <div class="Questionc hide">
+                <div class="question">Question</div>
+                <div id="answer-buttons" class="btn-grid">
+                    <button class="btn A ">Answer 1</button>
+                    <button class="btn B ">Answer 2</button>
+                    <button class="btn C">Answer 3</button>
+                    <button class="btn D">Answer 4</button>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="start-btn" class="start-btn-btn btnNew">Start</button>
+                <!-- <a href="/highscores.html/" class="btnH btnNew" id="highScore-btn">High score <svg xmlns="http://www.w3.org/2000/svg" height="22" width="24" viewBox="0 0 576 512"><path fill="#1bcbd2" d="M309 106c11.4-7 19-19.7 19-34c0-22.1-17.9-40-40-40s-40 17.9-40 40c0 14.4 7.6 27 19 34L209.7 220.6c-9.1 18.2-32.7 23.4-48.6 10.7L72 160c5-6.7 8-15 8-24c0-22.1-17.9-40-40-40S0 113.9 0 136s17.9 40 40 40c.2 0 .5 0 .7 0L86.4 427.4c5.5 30.4 32 52.6 63 52.6H426.6c30.9 0 57.4-22.1 63-52.6L535.3 176c.2 0 .5 0 .7 0c22.1 0 40-17.9 40-40s-17.9-40-40-40s-40 17.9-40 40c0 9 3 17.3 8 24l-89.1 71.3c-15.9 12.7-39.5 7.5-48.6-10.7L309 106z"/></svg></a> -->
+                <button id="next-btn" class="next-btn-btn hide btnNew">Next</button>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- <script src="server.js"></script> -->
+    <script src="main.js"></script>
+</body>
+
+</html>
